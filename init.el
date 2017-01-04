@@ -16,12 +16,13 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-(load "spacemacs-dark-theme.el")
-
 (defvar my-packages '(better-defaults paredit idle-highlight-mode ido-ubiquitous
-                                      find-file-in-project magit smex))
+                                      find-file-in-project magit smex spacemacs-theme flycheck))
 
 (package-initialize)
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(load "spacemacs-dark-theme.el")
+(global-flycheck-mode)
