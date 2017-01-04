@@ -16,6 +16,8 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
+(load "spacemacs-dark-theme.el")
+
 (defvar my-packages '(better-defaults paredit idle-highlight-mode ido-ubiquitous
                                       find-file-in-project magit smex))
 
