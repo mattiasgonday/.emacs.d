@@ -26,3 +26,6 @@
 
 (load "spacemacs-dark-theme.el")
 (global-flycheck-mode)
+
+;Remove trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
